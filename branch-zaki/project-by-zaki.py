@@ -1,29 +1,30 @@
 import time
 import random
 
-emojis = ["🗿", "💀"]
+emojis = ["💀", "🗿", "✅", "❌"]
 
 def guess():
-    emoji_to_guess = random.shuffle(emojis)
+    emoji_to_guess = random.choice(emojis)
     attempts = 0
 
     print("hello there and would wanna guess some emojis?")
     time.sleep(3)
-    print("there are two emojis you have to pick its either this: 🗿, or this one: 💀")
+    print("there are two emojis you have to pick between this emojis: 💀, 🗿, ✅, ❌")
+    time.sleep(2)
+    print("go ahead and take a guess")
     time.sleep(1)
 
     while True:
-        try:
-            user_guess = str(input("insert your emoji: "))
-        except:
-            print("you good bro?")
-            continue
+        user_guess = str(input("insert your emoji: "))
 
         attempts +=1
 
         if not user_guess == emoji_to_guess:
-            print("you must insert those following emojis using win + . ")
+            print("i think you guess the wrong one")
+            time.sleep(1)
+            print("note: use= win + . | to insert an emoji")
         elif user_guess == emoji_to_guess:
-            print(f"nice one you have guessed {emoji_to_guess} in a {attempts} try")
+            print(f"nice one you have guessed {emoji_to_guess} in {attempts} try")
+            break
 
 guess()
