@@ -9,9 +9,9 @@ def guess():
 
     print("hello there and would wanna guess some emojis?")
     time.sleep(3)
-    print("there are two emojis you have to pick between this emojis: 💀, 🗿, ✅, ❌")
+    print("there are 4 emojis you have to pick between this emojis: 💀, 🗿, ✅, ❌")
     time.sleep(2)
-    print("go ahead and take a guess")
+    print("go ahead, pick one")
     time.sleep(1)
 
     while True:
